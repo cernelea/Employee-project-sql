@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="com.cernelea.EmployeeController">
+    <headerText>
+
+        Fill in the information bellow.
+
+    </headerText>
+
+    <content>
+        <GridPane vgap="10" hgap="10">
+            
+            
+            <Label text="ID" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="idField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                       onKeyReleased="#checkLabels"
+            />
+            
+            
+            <Label text="First Name" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                       onKeyReleased="#checkLabels"
+            />
+  
+
+            <DatePicker fx:id="datePicker" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="comboBox" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Salary($)" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="salaryField" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                       onKeyReleased="#checkLabels"
+            />
+            <Button fx:id="cancelButton" text="Cancel" GridPane.rowIndex="4" GridPane.columnIndex="0" maxWidth="150"
+                    onAction="#setCancelButtonAction"
+            />
+
+            <Button fx:id="okButton" text="OK" GridPane.rowIndex="4" GridPane.columnIndex="1" maxWidth="150"
+                    onAction="#createEmployee"/>
+            
+            <Button fx:id="okButton2" text="OK" GridPane.rowIndex="4" GridPane.columnIndex="1" maxWidth="150"
+                    onAction="#setokButton2"/>
+
+            <Label fx:id="exceptionLabel" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <Label fx:id="exceptionLabel2" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+
+
+        </GridPane>
+
+
+    </content>
+
+
+</DialogPane>
